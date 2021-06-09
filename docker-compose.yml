@@ -1,0 +1,8 @@
+version: '2'
+services:
+  serial-killer:
+    build: ./serial-killer
+    environment:
+      - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
+    labels:
+      io.balena.features.dbus: '1'
