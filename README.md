@@ -2,7 +2,8 @@
 ## Disable the getty serial console in balenaOS development
 
 ### TL;DR
-Copy the `serial-killer` folder to your project, as well as the corresponding `docker-compose.yml` section.
+Copy the `serial-killer` folder to your project, as well as the corresponding `docker-compose.yml` section.  
+Don't forget to enable UART in the fleet configuration GUI or by running the command `balena env add BALENA_HOST_CONFIG_enable_uart 1`. Failure to do this will result in `/dev/serial0` to be missing completely.
 
 ### Introduction
 The development variant of balenaOS comes with the following features:
